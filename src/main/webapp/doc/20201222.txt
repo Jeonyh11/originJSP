@@ -1,0 +1,87 @@
+Web 아키택처 - 제한사항
+
+제한적인 UI (flash)
+추가기능 사용시 호환성/ 보완성 문제 (Active x)
+모든 브라우저가 동일한 기능 제공하지 않음
+버전별 호환 문제
+
+1교시 - client server architecture와 web architecture 비교해서 알기 
+
+HTML : Hyper Text Markup Languege
+서버 프로그램 구현하기
+ Web 이란
+ 인터넷에 연결된 컴퓨터들을 통해 사람들이 정보를 공유할 수 있는 정보 공간
+ HTTP프로토콜, 하이퍼텍스트, HTML형식을 사용하여 그림과 문자를 교환하는 전송방식
+ URL을 통해 요청
+ 초기 웹은 정적인 공간,문서 공유를 위한 목적으로 탄생
+ 동적으로 컨텐츠를 생성할 수 있는 Web 프로그래밍 환경 등장 (jsp, asp, php, 웹 어플리케이션)
+
+ 웹 페이지 -> 웹 어플리케이션   
+  (정적)             (동적)
+       
+ - 웹 어플리케이션 서버 방식 (WAS)
+ Was는 처리된 내역을 Web server로 전송, 최종적으로 Web Server가 Client에게 결과 전달
+
+ servlet/jsp는 thread방식으로 실행 -> 동시처리 성능이 우수
+ servlet/jsp는 main함수를 통해 실행하지 않는다.
+
+
+- 자바와 웹 프로그래밍
+ servlet : 자바파일이 컴파일 되면서 클래스파일로 바뀐다
+ jsp : 실행 시 servlet으로 변환되어 실행
+ Web Container : 웹 어플리케이션을 관리하고 실행할 수 있는 소프트웨어 (tomcat)
+
+Servlet : 자바 코드 안에 html 넣는 것
+JSP : html 문서안에 자바 코드를 넣는 것
+
+웹의 탄생 배경
+ URL을 통한 웹서버에 요청/응답 과정
+ 자바기반의 웹 프로그래밍 개요(Servlet/Jsp)
+
+servlet
+Server program + let : 작은 서버 프로그램 
+
+Web Application Server (WAS)
+	
+
+Web Container == servlet Container (tomcat)
+
+MIME (Multipurpose Internet Mail Extensions)
+ 전자우편을 위한 인터넷 표준 포맷
+
+  SMTP : 간이 전자 우편 전송 프로토콜
+	(기본적으로 7비트 기준 아스키 코드만 전송 가능 영어 이외는 인코딩 필요)
+
+  Content-Type
+	어떤 형식의 자료를 송/수신 하는지 표시 
+	text/html,  image/png
+
+ Servlet 생성
+  클래스 생성 (HttpServlet)
+  Request, Response 설정
+
+ http://docs.google.com
+
+Maven Project
+ - Group id : 회사의 도메인 역순으로 기술 해당 프로젝트를 진행하는 회사에 대한 정보
+	   naver.com => com.naver
+ - Artifact id : Group id에 해당하는 회사에서 진행하는 프로젝트명 
+	     goole : Gmail, Google Drive
+
+ - version : 프로젝트의 버전
+	  대. 중. 소 (3.5.2)
+
+jar : Java ARchive : 클래스들을 묶어 놓은 파일, 압출파일
+
+war : 웹 어플리케이션을 묶어 놓은 파일
+       tomcat의 webapps 폴더에 war파일을 복사 해놓고 톰캣을 기동하면
+       war파일을 톰캣으로 자동으로 압출해제하여 웹 어플리케이션이 구동하도록 한다.
+ 
+ pom : Project Object Model - 프로젝트에 대한 설정 정보
+ 		해당 프로젝트를 만든 회사
+ 		프로젝트 이름
+ 		프로젝트의 버전
+ 		프로젝트에서 필요로 하는 의존성 (dependency) - 라이브러리(ojdbc6.jar)
+
+
+
