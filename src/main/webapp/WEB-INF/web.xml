@@ -9,22 +9,23 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
-  
-  <!-- servlet 등록, 해당 서블릿에서 처리를 할 url 등록 -->
   <servlet>
-  	<servlet-name>basicServlet</servlet-name>
-  	<servlet-class>kr.or.ddit.servlet.basic.basicServlet</servlet-class>
-  	<load-on-startup>1</load-on-startup>
+    <servlet-name>basicServlet</servlet-name>
+    <servlet-class>kr.or.ddit.servlet.basic.basicServlet</servlet-class>
+    <load-on-startup>1</load-on-startup>
   </servlet>
-  
-  
-  <!-- servlet에서 처리할 url 매핑 -->
   <servlet-mapping>
-  	<servlet-name>basicServlet</servlet-name>
-  	<url-pattern>/basicServlet</url-pattern>
+    <servlet-name>basicServlet</servlet-name>
+    <url-pattern>/basicServlet</url-pattern>
   </servlet-mapping>
-  
+  <servlet>
+    <description></description>
+    <display-name>TimeTablesServlet</display-name>
+    <servlet-name>TimeTablesServlet</servlet-name>
+    <servlet-class>kr.or.ddit.servlet.basic.TimeTablesServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>TimeTablesServlet</servlet-name>
+    <url-pattern>/TimeTablesServlet</url-pattern>
+  </servlet-mapping>
 </web-app>
-
-
-
