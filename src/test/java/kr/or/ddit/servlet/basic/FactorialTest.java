@@ -62,8 +62,10 @@ public class FactorialTest {
 		int result = factorial.calculate(5);
 		
 		/***Then***/ //코드를 실행한 결과와 예상한 값이 일치하는지 검증
-		assertEquals(100, result);
-		System.out.println(result);
+		assertEquals(120, result);
+		
+		logger.debug(Integer.toString(result));
+		
 	}
 	
 	@Test
