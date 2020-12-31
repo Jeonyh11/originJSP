@@ -1,22 +1,51 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+<meta name="description" content="">
+<meta name="author" content="">
+
+
+<title>로그인 페이지</title>
+
+<!-- Bootstrap core CSS -->
+<link href="<%=request.getContextPath() %>/css/bootstrap.min.css"
+	rel="stylesheet">
+
+<!-- Custom styles for this template -->
+<link href="<%=request.getContextPath() %>/css/signin.css"
+	rel="stylesheet">
+
 </head>
+
 <body>
-<%-- 개인정보를 전송 하므로 url에 노출되지 않도록 request body 영역에 파라미터를 전송 > method="POST" --%>
 
-<form action="<%=request.getContextPath() %>/loginController" method="POST">
-user id : <input type ="text" name ="userid" value="bro"><br>
-user id : <input type ="text" name ="userid" value="pro"/><br>
-password : <input type ="password" name ="password" value="5678"/><br>
-<input type ="submit"  value="전송"/>
+	<div class="container">
 
-//input type =submit 은 자체가 전송이기 때문에 name="" 도 전송이 되는데 한글은 깨짐 
-</form>
+		<form class="form-signin"
+			action="<%=request.getContextPath()%>/loginController" method="post">
+			<h2 class="form-signin-heading">Please sign in</h2>
+			 <label for="inputEmail" class="sr-only">Email address</label>
+			 <input type="text" name="userid" class="form-control" placeholder="사용자아이디" required autofocus> 
+			 
+			 <label for="inputPassword" class="sr-only">Password</label> 
+			 <input type="password" name="password" class="form-control" placeholder="Password" required>
+			
+			<div class="checkbox">
+				<label> <input type="checkbox" value="remember-me">Remember me</label>
+			</div>
+			
+			<button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+		</form>
+
+	</div>
+	<!-- /container -->
+
+
 </body>
 </html>

@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,15 +7,15 @@
 <title>Insert title here</title>
 <style>
 table {
-	width : 80%;
-	margin : 150px;
-}
-td{
-text-align : center;
+	width: 80%;
+	margin: 150px;
 }
 
+td {
+	text-align: center;
+}
 </style>
-<script  type="text/javascript">
+<script type="text/javascript">
 <%-- <%for(int i =1; i<=9; i++) { --%>
 // 		out.println("<tr>");
 // 	for(int j =2; j <=9; j++) {
@@ -23,20 +23,53 @@ text-align : center;
 // 	}
 // 	out.println("</tr>");	
 <%-- }%> --%>
+
 </script>
 </head>
 <body>
-		
+
 	<table border='1'>
 
-	<% for(int i =1; i<=9; i++) { %>
+		<%
+		for (int i = 1; i <= 9; i++) {
+		%>
 		<tr>
-	<% 	for(int j =2; j <=9; j++) { %>
-		<td> <%= j %> * <%= i%> = <%= j*i%></td>
-		<% } %>
-		</tr>	
-	<% }%>
+			<%
+			for (int j = 2; j <= 9; j++) {
+			%>
+			<td><%=j%> * <%=i%> = <%=j * i%></td>
+			<%
+			}
+			%>
+		</tr>
+		<%
+		}
+		%>
 
-</table>
+	</table>
+
+
+	<table border='1'>
+
+		<%
+		for (int i = 1; i <= 9; i++) {
+		
+		out.write("<tr>");
+			
+			for (int j = 2; j <= 9; j++) {
+			
+				out.write("<td>");
+				out.write(j + "*" + i + "=" + j * i);
+				
+				out.write("</td>");
+			
+			}
+			
+		out.write("</tr>");
+		
+		}
+		%>
+
+	</table>
 </body>
 </html>

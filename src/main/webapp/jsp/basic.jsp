@@ -11,6 +11,8 @@
 <body>
 <%Date date = new Date(); %> <%--스크립틀릿 : 자바코드를 작성 --%>
 	Hello, World <%=new Date() %> <%--표현식 : 문자열 출력 --%>
+	
+	main.jsp
 </body>
 </html>
 

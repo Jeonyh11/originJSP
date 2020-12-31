@@ -29,31 +29,31 @@ public class TimeTablesServlet extends HttpServlet {
 		response.setContentType("text/html; charset=utf-8");
 		PrintWriter out = response.getWriter();
 		
-		out.println("<!DOCTYPE html>");
-		out.println("<!html>");
-		out.println("<head><!meta charset='utf-8'>");
-		out.println("<title>구구단</title></head>");
-		out.println("<style>");
-		out.println(" table{");
-		out.println("width : 100%;");
-		out.println("}");
-		out.println("</style>");
-		out.println("<body>");
+		out.write("<!DOCTYPE html>");
+		out.write("<!html>");
+		out.write("<head><!meta charset='utf-8'>");
+		out.write("<title>구구단</title></head>");
+		out.write("<style>");
+		out.write(" table{");
+		out.write("width : 100%;");
+		out.write("}");
+		out.write("</style>");
+		out.write("<body>");
 		
 		
-		out.println("<table border='1'>");
-//		out.println("<tr>");
+		out.write("<table border='1'>");
+
 		for(int i =1; i<=9; i++) {
-			out.println("<tr>");
+			out.write("<tr>");
 		for(int j =2; j <=9; j++) {
-			out.println("<td>" + j + "* "+i+"=" + j*i + "</td>");
+			out.write("<td>" + j + "* "+i+"=" + j*i + "</td>");
 		}
-		out.println("</tr>");
+		out.write("</tr>");
 		}
 		
-		out.println("</table>");
-		out.println("</body");
-		out.println("</html>");
+		out.write("</table>");
+		out.write("</body");
+		out.write("</html>");
 		
 	}
 
