@@ -22,10 +22,14 @@
 	
 탐구 과제
 1.webapp/error/type/runError.jsp 를 생성(텍스트는 본인 편한대로)
+
 2.RuntimeException 에러가 발생할 수 있는 jsp 페이지 생성
   webapp/jsp/run.jsp
+  
 3.web.xml에 runtimeException 예외에 대해 runError.jsp 페이지가 응답을 생성하도록 설정
+
 4.localhost/jsp/run.jsp로 접속
+
 5.**** 어떤 에러 페이지가 나오는지 확인
 	결과 : runError.jsp에서 응답이 옴
 
@@ -35,7 +39,19 @@
 7.arithmeticException, runtimeException이 발생한 것은 서버 에러로 볼수 있는데 500.html(jsp) 에러페이지에서 응답이 생성되지 
   않았는데  <error-page>엘레멘트를 기술한 순서가 응답에 영향을 미치는지 확인
   
-  	결과 : error-page 엘레멘트 기술 순서가 영향을 미치지 않음 예외 타입 에러페이지 설정이 에러코드 에러페이지 설정보다 우선시 된다.
+  	결과 : error-page 엘레멘트 기술 순서가 영향을 미치지 않음 
+  		 예외 타입 에러페이지 설정이 에러코드 에러페이지 설정보다 우선시 된다.
+  
+  
+  cookie 확인
+  	1. 개발자 도구
+  	2. script
+  	   document.cookie
+  	   
+  cookie 구성
+  쿠키이름=쿠키값; 쿠키이름2 = 쿠키값2; 쿠키이름3=쿠키값3;
+  
+  특정 쿠키 값을 확인하려면 ?
   
   
   

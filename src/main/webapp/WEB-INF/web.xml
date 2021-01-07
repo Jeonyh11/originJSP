@@ -28,6 +28,7 @@
     <servlet-name>TimeTablesServlet</servlet-name>
     <url-pattern>/TimeTablesServlet</url-pattern>
   </servlet-mapping>
+ 
   
   <!--  error page 설정 -->
   <error-page>
@@ -40,19 +41,17 @@
   	<location>/error/500/500.html</location>
   </error-page>
   
-  <error-page>
   <!-- class full name : 패키지.클래스명 -->
+  <error-page>
   	<exception-type>java.lang.ArithmeticException</exception-type>
   	<location>/error/type/arithmetic.jsp</location>
   </error-page>
   
-  <error-page>
+  
   <!-- class full name : 패키지.클래스명 -->
+  <error-page>
   	<exception-type>java.lang.RuntimeException</exception-type>
   	<location>/error/type/runError.jsp</location>
   </error-page>
-  
-  
-  
   
 </web-app>

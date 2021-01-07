@@ -7,10 +7,9 @@
 <title>Insert title here</title>
 </head>
 <body>
-<%
-	if(1 == 1){
-		throw new RuntimeException();
-	}
-%>
+
+<% if(1 ==1){
+	throw new RuntimeException();
+	}	%>
 </body>
 </html>

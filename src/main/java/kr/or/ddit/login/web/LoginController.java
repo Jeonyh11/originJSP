@@ -8,12 +8,15 @@ import java.util.Set;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import kr.or.ddit.cookie.CookieUtil;
 
 // web.xml 에 설정하는 servlet, servlet-mapping을 어노테이션을 통해 설정하는 방법
 @WebServlet("/loginController")
@@ -27,7 +30,18 @@ public class LoginController extends HttpServlet{
 
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-	
+		//클라이언트가 서버로 요청을 보낼시 브라우저에 의해 같이 전송된 쿠키 정보 확인
+		Cookie[] cookies = req.getCookies();
+		for(Cookie cookie : cookies) {
+			logger.debug("cookie.getname() : {} / cookie.getValue : {}", cookie.getName() ,cookie.getValue());
+			
+			if(cookie.getName().equals("userid")) {
+				Cookie newServerCookie = new Cookie("newServerCookie","testValue");
+				resp.addCookie(newServerCookie);
+			}
+		}
+		
+		
 		
 		// 사용자가 userid, pass 파라미터를 전송 했다는 가정으로 개발
 		

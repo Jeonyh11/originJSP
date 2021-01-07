@@ -17,7 +17,7 @@ public class mulCalculation extends HttpServlet {
        private static final Logger logger = LoggerFactory.getLogger(mulCalculation.class);
 	
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		req.getRequestDispatcher("/jsp/mulMain.jsp").forward(req, resp);;
+		req.getRequestDispatcher("/jsp/mulMain.jsp").forward(req, resp);
 	}
 
 	
