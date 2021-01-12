@@ -68,7 +68,9 @@ public class PagingUser extends HttpServlet{
 		int pagination = (int)Math.ceil((double) userCnt/ pageSize);
 		
 		req.setAttribute("userList", userList);
-		req.setAttribute("pageList", pagination);
+//		1월12일 수업
+		req.setAttribute("pagination", pagination);
+		req.setAttribute("PageVo", pageVo);
 		
 		req.getRequestDispatcher("/user/pagingUser.jsp").forward(req, resp);
 	}
