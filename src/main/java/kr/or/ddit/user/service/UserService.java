@@ -34,4 +34,32 @@ public class UserService implements UserServiceI{
 		   map.put("userCnt", userCnt);
 	      return map;
 	   }
+
+	@Override
+	public int modifyUser(UserVo userVo) {
+		int updateCnt = userDao.modifyUser(userVo);
+				
+		return updateCnt;
+	}
+
+	@Override
+	public int registUser(UserVo userVo) {		
+		
+		
+		int insertCnt = userDao.registUser(userVo);
+//		try {
+//		return userDao.registUser(userVo);
+//		}catch(Exception e) {
+//		return 0;
+//		}
+		return insertCnt;
+	}
+
+	@Override
+	public int deleteUser(String userid) {
+		
+		return userDao.deleteUser(userid);
+	}
+	   
+	  
 }
